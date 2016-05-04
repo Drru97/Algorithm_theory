@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heapsort", "Heapsort.csproj", "{AF710E6C-5817-49A3-B922-03A5B25F7A13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF710E6C-5817-49A3-B922-03A5B25F7A13}.Debug|x86.ActiveCfg = Debug|x86
+		{AF710E6C-5817-49A3-B922-03A5B25F7A13}.Debug|x86.Build.0 = Debug|x86
+		{AF710E6C-5817-49A3-B922-03A5B25F7A13}.Release|x86.ActiveCfg = Release|x86
+		{AF710E6C-5817-49A3-B922-03A5B25F7A13}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Heapsort.csproj
+	EndGlobalSection
+EndGlobal
