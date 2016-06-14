@@ -1,33 +1,41 @@
-﻿using System.Linq;
-
-namespace Counting_Sort
+﻿namespace Counting_Sort
 {
     class CountingSort
     {
-        public static int[] Sort(int[] array)
+        public static KVEntry[] Sort(KVEntry[] arrayA)
         {
-            int min = array.Min();
-            int max = array.Max();
-            int k = max - min + 1;
+            int[] arrayB = new int[MaxValue(arrayA) + 1];
+            KVEntry[] arrayC = new KVEntry[arrayA.Length];
 
-            int[] B = new int[array.Length];
-            int[] C = new int[k + 1];
+            for (int i = 0; i < arrayB.Length; i++)
+                arrayB[i] = 0;
 
-            for (int i = 0; i < k; i++)
-                C[i] = 0;
-            /* Задаємо значення count[i] як число елементів у масиві із значенням i+min-1 */
-            for (int j = 0; j < array.Length; j++)
-                C[array[j] + 1]++;
-            /* Оновлюємо count[i] як номер елементів із значенням < i+min */
-            for (int i = 1; i < k; i++)
-                C[i] += C[i - 1];
+            for (int i = 0; i < arrayA.Length; i++)
+                arrayB[arrayA[i].Value]++;
 
-            for (int i = (array.Length - 1); i >= 0; i--)
+            for (int i = 1; i < arrayB.Length; i++)
+                arrayB[i] += arrayB[i - 1];
+
+            for (int i = arrayA.Length - 1; i >= 0; i--)
             {
-                B[C[array[i]]] = array[i];
-                C[array[i]]++;              
+                int value = arrayA[i].Value;
+                int index = arrayB[value];
+
+                arrayB[value]--;
+                arrayC[index - 1] = new KVEntry();
+                arrayC[index - 1].Key = i;
+                arrayC[index - 1].Value = value;
             }
-            return B;
+            return arrayC;
+        }
+
+        static int MaxValue(KVEntry[] array)
+        {
+            int max = array[0].Value;
+            for (int i = 1; i < array.Length; i++)
+                if (array[i].Value > max)
+                    max = array[i].Value;
+            return max;
         }
     }
 }

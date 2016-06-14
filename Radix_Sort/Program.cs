@@ -19,6 +19,7 @@ namespace RadixSort
 			Console.WriteLine ("\nOutput array: ");
 			foreach (int x in array)
 				Console.Write (x + "\t");
+            Console.ReadKey();
 		}
 	}
 }

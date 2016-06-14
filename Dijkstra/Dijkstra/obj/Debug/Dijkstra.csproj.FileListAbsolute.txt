@@ -1,0 +1,6 @@
+C:\Users\Oleg\Desktop\Dijkstra\Dijkstra\bin\Debug\Dijkstra.exe.config
+C:\Users\Oleg\Desktop\Dijkstra\Dijkstra\bin\Debug\Dijkstra.exe
+C:\Users\Oleg\Desktop\Dijkstra\Dijkstra\bin\Debug\Dijkstra.pdb
+C:\Users\Oleg\Desktop\Dijkstra\Dijkstra\obj\Debug\Dijkstra.csprojResolveAssemblyReference.cache
+C:\Users\Oleg\Desktop\Dijkstra\Dijkstra\obj\Debug\Dijkstra.exe
+C:\Users\Oleg\Desktop\Dijkstra\Dijkstra\obj\Debug\Dijkstra.pdb

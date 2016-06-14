@@ -8,17 +8,17 @@ namespace Counting_Sort
         {
             Console.Write("Input numbers quantity: ");
             int n = int.Parse(Console.ReadLine());
+            KVEntry[] array = new KVEntry[n];
             Random rand = new Random();
-            int[] array = new int[n];
             for (int i = 0; i < array.Length; i++)
-            	array[i] = rand.Next(100);
+                array[i].Value = rand.Next(100);
             Console.WriteLine("Input array: ");
-            foreach (int el in array)
-                Console.Write(el + "\t");
+            foreach (KVEntry el in array)
+                Console.Write(el.Value + "\t");
             array = CountingSort.Sort(array);
             Console.WriteLine("\nOutput array: ");
-            foreach (int el in array)
-                Console.Write(el + "\t");
+            foreach (KVEntry el in array)
+                Console.Write(el.Value + "\t");
             Console.ReadKey();
         }
     }
